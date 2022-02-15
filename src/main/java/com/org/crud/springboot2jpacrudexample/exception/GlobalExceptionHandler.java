@@ -1,4 +1,4 @@
-package net.guides.springboot2.springboot2jpacrudexample.exception;
+package com.org.crud.springboot2jpacrudexample.exception;
 
 import java.util.Date;
 
@@ -13,6 +13,7 @@ public class GlobalExceptionHandler {
 	@ExceptionHandler(ResourceNotFoundException.class)
 	public ResponseEntity<?> resourceNotFoundException(ResourceNotFoundException ex, WebRequest request) {
 		ErrorDetails errorDetails = new ErrorDetails(new Date(), ex.getMessage(), request.getDescription(false));
+		System.out.println("Inside controller advise class");
 		return new ResponseEntity<>(errorDetails, HttpStatus.NOT_FOUND);
 	}
 

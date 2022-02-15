@@ -1,4 +1,4 @@
-package net.guides.springboot2.springboot2jpacrudexample.exception;
+package com.org.crud.springboot2jpacrudexample.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -8,7 +8,9 @@ public class ResourceNotFoundException extends Exception{
 
 	private static final long serialVersionUID = 1L;
 
-	public ResourceNotFoundException(String message){
+	public ResourceNotFoundException(String message)
+	{
     	super(message);
+		System.out.println("Inside resourcenotfound exception");
     }
 }
